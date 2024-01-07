@@ -7,7 +7,8 @@ Project ini digunakan untuk mendata pesanan laundry pakaian agar tidak terjadi k
 
 //Use Case//
 
-<img width="278" alt="image" src="https://github.com/prima06112002/AplikasiLaundryPakaian/assets/115150197/762419de-ec99-41a7-8bfb-dd6fe7366c27">
+<img width="278" alt="Screenshot 2024-01-07 210541" src="https://github.com/franconero14/Final_AplikasiLaundry/assets/115222047/a3424135-3454-42a6-a3a9-d5c79f6c2bfb">
+
 
 *add data pesanan : berfungsi untuk menambah daftar pesanan baru agar dapat terlist di daftar pesanan
 *update data pesanan : Berfungsi untuk mengupdate pesanan yang sudah terlist apabila terjadi kesalahan
