@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">AplikasiLaundry</string>
+    <string name="app_name">Laundry App</string>
+    <string name="form">Tambah Pesanan</string>
+    <string name="edit">Ubah Pesanan</string>
+    <string name="data_pesanan">Data Pesanan</string>
+    <string name="namaUser">Nama Pelanggan</string>
+    <string name="hpUser">Kontak Pelanggan</string>
+    <string name="alamatUser">Alamat Pelanggan</string>
+    <string name="hargaUser">Total Harga</string>
+    <string name="berat">Berat(kg)</string>
+    <string name="pewangi">Jenis Pewangi</string>
+    <string name="mawar">Mawar Super Laundry</string>
+    <string name="oxib">Oxib Parfum Laundry</string>
+    <string name="indofresh">Indofresh Parfum Laundry</string>
+    <string name="snap">Snap Clean</string>
+    <string name="back_button">Kembali</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_add">Tambah Pesanan</string>
+    <string name="btn_delete">Hapus Pesanan</string>
+    <string name="btn_update">Update Pesanan</string>
 </resources>
