@@ -6,11 +6,11 @@ import kotlinx.coroutines.flow.Flow
 
 class OffLineRepository(private val pesananDao: PesananDao) : PesananRepository {
     override fun getAllPesananStream(): Flow<List<Pesanan>> {
-        TODO("Not yet implemented")
+        return pesananDao.getAllPesanan()
     }
 
     override fun getPesananStream(id: Int): Flow<Pesanan?> {
-        TODO("Not yet implemented")
+        return pesananDao.getPesanan(id)
     }
 
     override suspend fun insertPesanan(pesanan: Pesanan) {
