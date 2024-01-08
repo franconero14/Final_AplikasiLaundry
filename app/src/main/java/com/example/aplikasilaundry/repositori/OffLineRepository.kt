@@ -18,11 +18,11 @@ class OffLineRepository(private val pesananDao: PesananDao) : PesananRepository 
     }
 
     override suspend fun updatePesanan(pesanan: Pesanan) {
-        TODO("Not yet implemented")
+        return pesananDao.update(pesanan)
     }
 
     override suspend fun deletePesanan(pesanan: Pesanan) {
-        TODO("Not yet implemented")
+        return pesananDao.delete(pesanan)
     }
 
 }
