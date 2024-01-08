@@ -16,6 +16,14 @@ class FormViewModel(private val pesananRepository: PesananRepository) : ViewMode
             nama.isNotBlank() && nohp.isNotBlank() && alamat.isNotBlank() && wangi.isNotBlank()
         }
     }
+
+    fun updateUiState(detailLaundry: DetailLaundry) {
+        uiStatePesanan =
+            UIStatePesanan(
+                detailLaundry = detailLaundry,
+                isEntryValid = nullValidation(detailLaundry)
+            )
+    }
 }
 
 data class UIStatePesanan(
