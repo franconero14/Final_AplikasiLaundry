@@ -10,6 +10,9 @@ interface PesananRepository {
 
     suspend fun insertPesanan(pesanan: Pesanan)
 
+    suspend fun updatePesanan(pesanan: Pesanan)
+    suspend fun deletePesanan(pesanan: Pesanan)
+
 
 
 }
