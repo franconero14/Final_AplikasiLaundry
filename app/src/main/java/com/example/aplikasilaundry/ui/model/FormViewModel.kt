@@ -26,6 +26,11 @@ fun DetailLaundry.toLaundry(): Pesanan = Pesanan(
     wangi = wangi
 )
 
+fun Pesanan.toUiStatePesanan(isEntryValid: Boolean = false): UIStatePesanan = UIStatePesanan(
+    detailLaundry = this.toDetailLaundry(),
+    isEntryValid = isEntryValid
+)
+
 fun Pesanan.toDetailLaundry(): DetailLaundry = DetailLaundry(
     id = id,
     nama = nama,
