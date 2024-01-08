@@ -14,7 +14,7 @@ class OffLineRepository(private val pesananDao: PesananDao) : PesananRepository 
     }
 
     override suspend fun insertPesanan(pesanan: Pesanan) {
-        TODO("Not yet implemented")
+        return pesananDao.insert(pesanan)
     }
 
     override suspend fun updatePesanan(pesanan: Pesanan) {
