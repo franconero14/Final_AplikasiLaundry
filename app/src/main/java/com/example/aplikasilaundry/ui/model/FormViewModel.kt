@@ -24,6 +24,11 @@ class FormViewModel(private val pesananRepository: PesananRepository) : ViewMode
                 isEntryValid = nullValidation(detailLaundry)
             )
     }
+    suspend fun savePesanan() {
+        if (nullValidation()) {
+            pesananRepository.insertPesanan(uiStatePesanan.detailLaundry.toLaundry())
+        }
+    }
 }
 
 data class UIStatePesanan(
