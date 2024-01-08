@@ -1,6 +1,7 @@
 package com.example.aplikasilaundry.data
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Update
@@ -12,4 +13,7 @@ interface PesananDao {
 
     @Update
     suspend fun update(pesanan: Pesanan)
+
+    @Delete
+    suspend fun  delete(pesanan: Pesanan)
 }
