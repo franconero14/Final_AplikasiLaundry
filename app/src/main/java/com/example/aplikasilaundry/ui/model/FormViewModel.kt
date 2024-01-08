@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import com.example.aplikasilaundry.data.Pesanan
 import com.example.aplikasilaundry.repositori.PesananRepository
 
+private const val HARGA_PER_KG = 3500
+
 class FormViewModel(private val pesananRepository: PesananRepository) : ViewModel() {
     var uiStatePesanan by mutableStateOf(UIStatePesanan())
         private set
