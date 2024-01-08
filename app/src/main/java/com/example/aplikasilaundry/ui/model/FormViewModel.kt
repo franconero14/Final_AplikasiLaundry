@@ -12,6 +12,15 @@ data class DetailLaundry(
     val wangi: String = ""
 )
 
+fun DetailLaundry.toLaundry(): Pesanan = Pesanan(
+    id = id,
+    nama = nama,
+    nohp = nohp,
+    alamat = alamat,
+    harga = harga,
+    wangi = wangi
+)
+
 fun Pesanan.toDetailLaundry(): DetailLaundry = DetailLaundry(
     id = id,
     nama = nama,
