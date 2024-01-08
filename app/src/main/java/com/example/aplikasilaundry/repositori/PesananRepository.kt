@@ -8,5 +8,8 @@ interface PesananRepository {
 
     fun getPesananStream(id: Int): Flow<Pesanan?>
 
+    suspend fun insertPesanan(pesanan: Pesanan)
+
+
 
 }
