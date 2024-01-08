@@ -3,6 +3,11 @@ package com.example.aplikasilaundry.ui.model
 import com.example.aplikasilaundry.data.Pesanan
 
 
+data class UIStatePesanan(
+    val detailLaundry: DetailLaundry = DetailLaundry(),
+    val isEntryValid: Boolean = false
+)
+
 data class DetailLaundry(
     val id: Int = 0,
     val nama: String = "",
