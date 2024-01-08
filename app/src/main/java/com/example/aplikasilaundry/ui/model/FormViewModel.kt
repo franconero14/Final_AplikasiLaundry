@@ -1,7 +1,22 @@
 package com.example.aplikasilaundry.ui.model
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.ViewModel
 import com.example.aplikasilaundry.data.Pesanan
+import com.example.aplikasilaundry.repositori.PesananRepository
 
+class FormViewModel(private val pesananRepository: PesananRepository) : ViewModel() {
+    var uiStatePesanan by mutableStateOf(UIStatePesanan())
+        private set
+
+    private fun nullValidation(uiState: DetailLaundry = uiStatePesanan.detailLaundry): Boolean {
+        return with(uiState) {
+            nama.isNotBlank() && nohp.isNotBlank() && alamat.isNotBlank() && wangi.isNotBlank()
+        }
+    }
+}
 
 data class UIStatePesanan(
     val detailLaundry: DetailLaundry = DetailLaundry(),
