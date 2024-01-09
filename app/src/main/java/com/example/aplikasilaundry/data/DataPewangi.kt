@@ -1,6 +1,6 @@
 package com.example.aplikasilaundry.data
 
-import com.example.aplikasilaundry.R
+import com.example.lebe.R
 
 object DataPewangi {
     val paket = listOf(
