@@ -1,19 +1,27 @@
 package com.example.aplikasilaundry.ui.pages
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.aplikasilaundry.R
+import com.example.aplikasilaundry.data.DataPewangi.paket
 import com.example.aplikasilaundry.navigasi.DestinasiHalaman
 import com.example.aplikasilaundry.navigasi.LaundryAppBar
 import com.example.aplikasilaundry.ui.model.DetailLaundry
@@ -69,4 +77,42 @@ fun EntryPesananBody(
     onPenyewaValueChange: (DetailLaundry) -> Unit,
     onSaveClick: () -> Unit,
     modifier: Modifier
-) {}
+) {
+    val context = LocalContext.current
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(20.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        FormInputPesanan(
+            detailLaundry = uiStatePenyewa.detailLaundry,
+            onValueChange = onPenyewaValueChange,
+            pilihanSewa = paket.map { id -> context.resources.getString(id) },
+            onSelectionChanged = { uiStatePenyewa.detailLaundry.wangi }
+        )
+        Button(
+            onClick = onSaveClick,
+            enabled = uiStatePenyewa.isEntryValid,
+            shape = MaterialTheme.shapes.small,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "CHECKOUT")
+        }
+
+    }
+}
+
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormInputPesanan(
+    detailLaundry: DetailLaundry,
+    modifier: Modifier = Modifier,
+    onValueChange: (DetailLaundry) -> Unit = {},
+    enabled: Boolean = true,
+    pilihanSewa: List<String>,
+    onSelectionChanged: (String) -> Unit
+
+) {
+}
