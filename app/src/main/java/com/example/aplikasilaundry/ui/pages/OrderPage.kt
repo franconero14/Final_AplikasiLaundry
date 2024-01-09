@@ -13,11 +13,38 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.aplikasilaundry.R
 import com.example.aplikasilaundry.data.Pesanan
+
+@Composable
+fun HomeBody(
+    modifier: Modifier,
+    dataLaundry: List<Pesanan>,
+    onPesananClick: (Int) -> Unit = {},
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+    ) {
+        if (dataLaundry.isEmpty()) {
+            Text(text = "Tidak ada data pesananan", textAlign = TextAlign.Center)
+        } else {
+            Listpesanan(
+                listLaundry = dataLaundry,
+                onItemClick = { onPesananClick(it.id) },
+                modifier = Modifier.padding(horizontal = 8.dp)
+            )
+        }
+
+    }
+}
 
 @Composable
 fun Listpesanan(
