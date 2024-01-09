@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lebe"
+    namespace = "com.example.aplikasilaundry"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lebe"
+        applicationId = "com.example.aplikasilaundry"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
