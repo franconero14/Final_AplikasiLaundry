@@ -10,6 +10,7 @@ import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,6 +34,11 @@ fun LaundryAppBar(
             }
         }
     )
+}
+
+@Composable
+fun LaundryApp(navController: NavHostController = rememberNavController()) {
+    PenyediaNavigasi(navController = navController)
 }
 
 @Composable
