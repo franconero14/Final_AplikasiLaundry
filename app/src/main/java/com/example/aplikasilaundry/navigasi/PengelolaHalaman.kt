@@ -12,6 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
+enum class PengelolaHalaman {
+    Home,
+    Entry
+}
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LaundryAppBar(
