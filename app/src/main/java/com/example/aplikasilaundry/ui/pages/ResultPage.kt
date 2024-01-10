@@ -103,3 +103,11 @@ private fun ItemDetailRow(
         Text(text = itemDetail, fontWeight = FontWeight.Bold)
     }
 }
+
+@Composable
+private fun DeleteDialog(
+    onDeleteConfirm: () -> Unit,
+    onDeleteCancel: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+}
