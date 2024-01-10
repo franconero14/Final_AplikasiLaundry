@@ -69,6 +69,16 @@ private fun ItemDetailsBody(
             ) {
                 Text("Hapus")
             }
+            if (deleteConfirmationRequired) {
+                DeleteDialog(
+                    onDeleteConfirm = {
+                        deleteConfirmationRequired = false
+                        onDelete()
+                    },
+                    onDeleteCancel = { deleteConfirmationRequired = false },
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
         }
     }
 }
