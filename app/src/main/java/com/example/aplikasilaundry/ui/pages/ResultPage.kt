@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.aplikasilaundry.R
+import com.example.aplikasilaundry.data.Pesanan
 import com.example.aplikasilaundry.navigasi.DestinasiHalaman
 import com.example.aplikasilaundry.ui.model.ItemDetailUiState
 
@@ -29,4 +30,11 @@ private fun ItemDetailsBody(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
     }
+}
+
+@Composable
+private fun ItemDetails(
+    pesanan: Pesanan,
+    modifier: Modifier = Modifier
+) {
 }
