@@ -59,6 +59,11 @@ private fun ItemDetails(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            ItemDetailRow(
+                labelResID = R.string.namaUser,
+                itemDetail = pesanan.nama,
+                modifier = Modifier.padding(horizontal = 16.dp)
+            )
         }
     }
 }
