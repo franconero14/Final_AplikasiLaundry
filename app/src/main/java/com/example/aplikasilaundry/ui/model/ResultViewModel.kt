@@ -23,6 +23,11 @@ class ResultViewModel(
                 started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
                 initialValue = ItemDetailUiState()
             )
+
+    suspend fun deleteItem() {
+        pesananRepository.deletePesanan(uiState.value.detailLaundry.toLaundry())
+    }
+
     companion object {
         private const val TIMEOUT_MILLIS = 5_000L
     }
