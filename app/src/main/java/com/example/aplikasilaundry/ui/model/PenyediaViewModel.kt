@@ -13,6 +13,7 @@ object PenyediaViewModel {
         initializer {
             FormViewModel(aplikasiLaundry().dataContainer.pesananRepository)
         }
+        initializer { ResultViewModel(createSavedStateHandle(),aplikasiLaundry().dataContainer.pesananRepository) }
     }
 }
 
