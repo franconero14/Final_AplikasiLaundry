@@ -38,6 +38,14 @@ class UpdateViewModel(
         }
     }
 
+    fun updateUiState(detailLaundry: DetailLaundry) {
+        pesananUiState =
+            UIStatePesanan(
+                detailLaundry = detailLaundry,
+                isEntryValid = validasiInput(detailLaundry)
+            )
+    }
+
     private fun validasiInput(uiState: DetailLaundry = pesananUiState.detailLaundry): Boolean {
         return with(uiState) {
             nama.isNotBlank() && alamat.isNotBlank() && wangi.isNotBlank()
