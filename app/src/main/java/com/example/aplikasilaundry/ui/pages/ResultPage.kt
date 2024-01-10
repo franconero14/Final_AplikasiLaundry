@@ -64,6 +64,11 @@ private fun ItemDetails(
                 itemDetail = pesanan.nama,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
+            ItemDetailRow(
+                labelResID = R.string.hpUser,
+                itemDetail = pesanan.nohp,
+                modifier = Modifier.padding(horizontal = 16.dp)
+            )
         }
     }
 }
