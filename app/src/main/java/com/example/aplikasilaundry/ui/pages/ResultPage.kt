@@ -14,6 +14,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -22,6 +26,7 @@ import com.example.aplikasilaundry.R
 import com.example.aplikasilaundry.data.Pesanan
 import com.example.aplikasilaundry.navigasi.DestinasiHalaman
 import com.example.aplikasilaundry.ui.model.ItemDetailUiState
+import com.example.aplikasilaundry.ui.model.toLaundry
 
 object DataDestinasi : DestinasiHalaman {
     override val route = "item_details"
@@ -41,6 +46,11 @@ private fun ItemDetailsBody(
         modifier = modifier.padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
+        ItemDetails(
+            pesanan = itemDetailUiState.detailLaundry.toLaundry(),
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
 
