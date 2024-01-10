@@ -62,6 +62,13 @@ private fun ItemDetailsBody(
             ) {
                 Text(text = "Update")
             }
+            OutlinedButton(
+                onClick = { deleteConfirmationRequired = true },
+                shape = MaterialTheme.shapes.small
+
+            ) {
+                Text("Hapus")
+            }
         }
     }
 }
