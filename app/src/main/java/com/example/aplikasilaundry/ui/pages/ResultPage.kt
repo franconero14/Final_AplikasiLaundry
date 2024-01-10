@@ -51,6 +51,11 @@ private fun ItemDetailsBody(
             pesanan = itemDetailUiState.detailLaundry.toLaundry(),
             modifier = Modifier.fillMaxWidth()
         )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+        }
     }
 }
 
