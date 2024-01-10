@@ -90,5 +90,14 @@ fun PenyediaNavigasi(
                     navigateBack = { navController.popBackStack() })
             }
         }
+        composable(FormDestinasi.route) {
+            EntryPesananScreen(navigateBack = { navController.popBackStack() })
+        }
+        composable(
+            UpdateDestinasi.routeWithArgs,
+            arguments = listOf(navArgument(UpdateDestinasi.itemIdArg) {
+                type = NavType.IntType
+            })
+        ) {}
     }
 }
