@@ -14,6 +14,7 @@ object PenyediaViewModel {
             FormViewModel(aplikasiLaundry().dataContainer.pesananRepository)
         }
         initializer { ResultViewModel(createSavedStateHandle(),aplikasiLaundry().dataContainer.pesananRepository) }
+        initializer { UpdateViewModel(createSavedStateHandle(),aplikasiLaundry().dataContainer.pesananRepository) }
     }
 }
 
