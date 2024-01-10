@@ -98,6 +98,10 @@ fun PenyediaNavigasi(
             arguments = listOf(navArgument(UpdateDestinasi.itemIdArg) {
                 type = NavType.IntType
             })
-        ) {}
+        ) {
+            ItemEditScreen(
+                navigateBack = { navController.popBackStack() },
+                onNavigateUp = { navController.popBackStack() })
+        }
     }
 }
