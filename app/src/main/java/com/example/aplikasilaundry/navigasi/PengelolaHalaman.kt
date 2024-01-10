@@ -77,5 +77,18 @@ fun PenyediaNavigasi(
                 onDetailClick = { itemId -> navController.navigate("${DataDestinasi.route}/$itemId") }
             )
         }
+        composable(
+            DataDestinasi.routeWithArgs,
+            arguments = listOf(navArgument(DataDestinasi.laundryIdArg) {
+                type = NavType.IntType
+            })
+        ) { backStackEntry ->
+            val itemId = backStackEntry.arguments?.getInt(DataDestinasi.laundryIdArg)
+            itemId?.let {
+                DetailScreen(
+                    navigateToEditItem = { navController.navigate("${UpdateDestinasi.route}/$it") },
+                    navigateBack = { navController.popBackStack() })
+            }
+        }
     }
 }
